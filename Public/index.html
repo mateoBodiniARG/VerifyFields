@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>FrontendForm</title>
+  </head>
+  <body>
+    <main class="main-container">
+      <!-- START TEXT -->
+      <div class="left">
+        <h1>Learn to code by watching others</h1>
+        <p>
+         See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.
+        </p>
+      </div>
+
+
+      <!-- RIGHT -->
+      <div class="right">
+        <div class="right-trial">
+          <p class="trial-text"> <span class="resalt-text">Try it free 7 days</span> then $20/mo. thereafter</p>
+        </div>
+
+        <form class="right-form" id="form">
+            <!-- FIRST NAME  -->
+          <div class="controls">
+            <input
+              type="text"
+              id="form-name"
+              name="form-name"
+              placeholder="First Name"
+              aria-label="Input for first name"
+            />
+            <p id="name-error" class="error-text hidden">First Name cannot be empty </p>
+          </div>
+
+          <!-- LAST NAME  -->
+          <div>
+            <input
+              type="text"
+              id="form-lastName"
+              name="form-lastName"
+              placeholder="Last Name"
+            />
+            <p id="last-name-error" class="error-text hidden">Last Name cannot be empty </p>
+          </div>
+
+          <!-- EMAIL  -->
+          <div>
+            <input
+              type="text"
+              id="form-email"
+              name="form-email"
+              placeholder="Email"
+            />
+            <p id="email-error" class="error-text hidden">Looks like this is not an email</p>
+          </div>
+
+          <!-- PASSWORD  -->
+          <div>
+            <input
+              type="text"
+              id="password"
+              name="form-pass"
+              placeholder="Password"
+            />
+            <p id="password-text-error" class="error-text hidden">Password cannot be empty</p>
+            <p id="passwordLengthVerify" class="hidden2 verifyLength">The password must be longer than 8 characters.</p>
+          </div>
+
+          <!-- BUTTON CLAIM -->
+          <button id="buttonSubmit" type="submit">CLAIM YOUR FREE TRIAL</button>
+          <!-- TERM AND SERVICES -->
+          <p class="terms-services">
+            By clicking the button, you are agreeing to our
+            <span class="p-span">Terms and Services</span>
+          </p>
+        </form>
+          <script src="app.js"></script>
+      </div>
+    </main>
+  </body>
+</html>

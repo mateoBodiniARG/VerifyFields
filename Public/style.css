@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--Font-family);
+}
+
+:root{
+    /* PRIMARY COLORS */
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+    --white: #ffffff;
+
+    /* ACENT COLOR */
+    --Blue: hsl(248, 32%, 49%);
+
+    /* NEUTRAL */
+    --Dark-Blue: #3d3b48;
+    --Grayish-Blue: hsl(249, 5%, 74%);
+    --Grayish: hsl(0,0%,87%,1);
+
+    /* FONT FAMILY */
+    --Font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: var(--Red);
+    background-image: url(/images/bg-intro-desktop.png);
+}
+.main-container{
+    display: flex;
+    max-width: 100vw;
+    max-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 150px;
+}
+
+
+/* LEFT CONTENT */
+.left{
+    width: 500px;
+    margin-right: 75px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+h1{
+    font-size: 50px;
+    color: var(--white)
+}
+
+.left p{
+    color: var(--white);
+    font-weight: 500;
+}
+
+
+
+
+/* RIGHT CONTENT */
+
+
+/* FORM */
+
+/* TRIAL TEXT */
+.right-trial{
+    color: var(--white);
+    width: 540px;
+    height: 65px;
+    background-color: var(--Blue);
+    border-radius: 10px;
+    box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+.resalt-text{
+    font-weight: 700;
+}
+
+
+.right-form{
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 540px;
+    min-height: 485px;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    margin-right: 10px;
+    box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.15);;
+}
+
+/* FIELDS FORM */
+input{
+    letter-spacing: 1px;
+    background-color: var(--white);
+    border-radius: 5px;
+    font-size: 14px;
+    padding-left: 14px;
+    width: 470px;
+    height: 59px;
+    margin-top: 20px;
+    font-weight: 600;
+    color: var(--Dark-Blue);
+    border: .5px solid var(--Grayish)
+}
+
+input:focus {
+    color: var(--Dark-Blue);
+    outline: solid 1px var(--Blue)
+  }
+  input:focus::placeholder {
+    color: var(--Dark-Blue);
+  }
+
+button{
+    width: 450px;
+    height: 57px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--Green);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: inset 0px -4px 0px 0px rgba(0, 0, 0, 0.09);
+    cursor: pointer;
+}
+
+button:hover{
+    opacity: .8;
+}
+
+.terms-services{
+    margin-top: 12px;
+    font-size: 12px;
+    color: var(--Grayish-Blue);
+    font-weight: 500;
+}
+.p-span{
+    color: var(--Red);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+
+
+
+/* ERRORS */
+
+.hidden2{
+    display: none;
+}
+.verifyLength{
+    padding-top: 6px;
+    color: var(--Red);
+    font-style: italic;
+    font-size: 12px;
+    text-align: right;
+}
+
+.hidden{
+    display: none;
+}
+.error-text{
+    padding-top: 6px;
+    color: var(--Red);
+    font-style: italic;
+    font-size: 12px;
+    text-align: right;
+}
+
+
+/* ADD .ERROR --> INPUT CLASS */
+.error{
+    border: 2px solid var(--Red);
+    background: url(/images/icon-error.svg) no-repeat;
+    background-position: 95% 50%;
+} 
+
+
+
+/* SUCCSESS */
+
+.succses{
+    border: 2px solid var(--Green);
+}
+
+@media (max-width: 1059px){
+    h1{
+        font-size: 38px;
+
+    }
+
+}
+
+
+@media (max-width: 970px){
+    
+    .main-container{
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    .main-container p{
+        width: unset;
+        text-align: center;
+    }
+    h1{
+        text-align: center;
+        font-size: 45px;
+    }
+    .right-trial{
+        margin-top: 25px;
+    }
+}
