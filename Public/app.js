@@ -10,27 +10,24 @@ const emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const formPassword = document.getElementById('password');
 const passError = document.getElementById('password-text-error')
-const lengthPass = document.getElementById('passwordLengthVerify')
+const passVerify = document.getElementById('passwordLengthVerify')
+
+const subscribeNotification = document.getElementById('subscribe-notification');
 
 const btn = document.getElementById("buttonSubmit");
 
-const checkField = (field, errorElement, regExp,) => {
+const checkField = (field, errorElement, regExp) => {
   const value = field.value.trim();
   if (!value) {
     field.classList.add("error");
     errorElement.classList.remove("hidden");
     return false;
     
-  }else if (value,length <= 8){
-    field.classList.remove('hidden2')
-   console.log('hola')
-  }
-  else if (regExp && !regExp.test(value)) {
+  } else if (regExp && !regExp.test(value)) {
     field.classList.add("error");
     errorElement.classList.remove("hidden");
     return false;
-  }
-  else {
+  } else {
     field.classList.add("succses");
     field.classList.remove("error");
     errorElement.classList.add("hidden");
@@ -38,16 +35,34 @@ const checkField = (field, errorElement, regExp,) => {
   }
 };
 
+const verifyPass = () => { 
+  const valPass = formPassword.value.trim()
+  if(valPass.length < 8 ){
+    formPassword.classList.remove('succses')
+    formPassword.classList.add("errorLength");
+    passVerify.classList.remove("hidden2");
+    return false;
+  } else {
+    formPassword.classList.add("succses");
+    formPassword.classList.remove("errorLength");
+    passVerify.classList.add("hidden2");
+    return true;
+  }
+}
 
 
 btn.addEventListener("click", (e) => {
   e.preventDefault();
-  const isPassValid = checkField(formPassword, passError, lengthPass);
+  const isPassValid = checkField(formPassword, passError);
   const isNameValid = checkField(formName, nameError);
   const isLastNameValid = checkField(formLastName, lastNameError);
   const isEmailValid = checkField(formEmail, emailError, emailReg);
+  const passLength = verifyPass()
 
-  if (isNameValid && isLastNameValid && isEmailValid && isPassValid) {
-    console.log('hola')
+if (isPassValid && isNameValid && isLastNameValid && isEmailValid && passLength) {
+    subscribeNotification.classList.add('show');
+    setTimeout(() => {
+      subscribeNotification.classList.remove('show');
+    }, 3000);
   }
 });
