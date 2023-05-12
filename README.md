@@ -11,6 +11,9 @@ Verify that the data is correct and also that it complies with certain regular e
 - CSS
 - JavaScript
 
+## Live Denmo
+https://vocal-marshmallow-9e3dcb.netlify.app/
+
 ## What's Next?
 
 I am constantly seeking new challenges and creating projects every day to improve my programming skills. In the future, I plan to add more functionality to this calculator and also create more interesting projects with different technologies and tools.
